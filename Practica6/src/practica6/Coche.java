@@ -70,7 +70,7 @@ public class Coche {
 	 * Método que se ejecuta cuando el tipo es igual a Gasolina
 	 * @param modelo Modelo del coche
 	 * @param fabricante Fabricante del coche
-	 * @return Devuelve el fabricante el modelo además del consumo por litros. 
+	 * @return es un Opel Corsa y gasta 1,337 euros por litro.
 	 */
 	public String metodoGasolina(String modelo, String fabricante) {
 		String resultadoGasolina = "es un" + fabricante + modelo + "y gasta 1,337 euros por litro";
@@ -81,7 +81,7 @@ public class Coche {
 	 * Método que se ejecuta cuando el tipo es igual a "Diesel"
 	 * @param modelo Modelo del coche
 	 * @param fabricante Fabricante del coche
-	 * @return Devuelve el fabricante el modelo además del consumo por litros. 
+	 * @return es un Seat Ibiza y gasta 1,052 euros por litro.
 	 */
 	public String metodoDiesel(String modelo, String fabricante) {
 		String resultadoDiesel = "es un" + fabricante + modelo + "y gasta 1,052 euros por litro";
@@ -92,7 +92,7 @@ public class Coche {
 	 * Método que se ejecuta cuando el tipo es igual a "Hibrido"
 	 * @param modelo Modelo del coche 
 	 * @param fabricante Fabricante del coche
-	 * @return Este método no devuelve consumo ya que no necesita combustible
+	 * @return es un Hyundai Getz y no necesita combustible.
 	 */
 	public String metodoHibrido(String modelo, String fabricante) {
 		String resultadoHibrido = "es un" + fabricante + modelo + "y no necesita combustible";
