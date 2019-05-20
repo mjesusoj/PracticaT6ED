@@ -3,7 +3,7 @@ package practica6;
 /**
  *  Clase Coche que posee varios atributos además de varios métodos
  *  @author Manuel Jesús Ojeda Salvador
- *	@version 1.0
+ *	@version 2.0
  */
 
 public class Coche {
