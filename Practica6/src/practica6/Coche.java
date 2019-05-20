@@ -1,10 +1,10 @@
 package practica6;
 
-	/**
-	 *  Clase Coche que posee varios atributos además de varios métodos
-	 *  @author Manuel Jesús Ojeda Salvador
-	 *	@version 1.0
-	 */
+/**
+ *  Clase Coche que posee varios atributos además de varios métodos
+ *  @author Manuel Jesús Ojeda Salvador
+ *	@version 1.0
+ */
 
 public class Coche {
 
@@ -43,25 +43,32 @@ public class Coche {
 	}
 
 	/**
-	 * Este método funciona de tal manera que si el atributo tipo es igual a "Diesel" se ejecuta un método y si no es ninguno se ejecuta el else último.
+	 * Este método funciona de tal manera, que si el atributo tipo es igual a "Diesel" se ejecuta un método y si no es ninguno de los que aparecen, 
+	 * se ejecuta el caso por defecto.
 	 * @return El resultado devuelve la constante anteriormente creada, además del atributo matricula, 
 	 * también se devuelve el resultado de los varios métodos que se mencionan más abajo 
 	 * al que se le pasan dos parámetros el modelo y la matrícula.
 	 */
 	public String metodoinformativo() {
 		String resultado = "";
-		if (tipo == "Gasolina") {
-			resultado += coche + matricula + " ";
-			resultado += metodoGasolina(modelo, fabricante);
-		} else if (tipo == "Diesel") {
-			resultado += coche + matricula + " ";
-			resultado += metodoDiesel(modelo, fabricante);
-		} else if (tipo == "Híbrido") {
-			resultado += coche + matricula + " ";
-			resultado += metodoHibrido(modelo, fabricante);
-		} else {
-			resultado += coche + matricula + " ";
-			resultado += "no dispone de información";
+
+		switch (tipo)
+		{
+		case "Gasolina":
+			resultado += coche + matricula + metodoGasolina(modelo, fabricante);
+			break;
+
+		case "Diesel":
+			resultado += coche + matricula + metodoDiesel(modelo, fabricante);
+			break;
+
+		case "Híbrido":
+			resultado += coche + matricula + metodoHibrido(modelo, fabricante);
+			break;
+
+		default:
+			resultado += coche + matricula + "no dispone de información";
+			break;		
 		}
 		return resultado;
 	}
