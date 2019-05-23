@@ -45,7 +45,7 @@ public class Coche {
 	/**
 	 * Este método funciona de tal manera, que si el atributo tipo es igual a "Diesel" se ejecuta un método y si no es ninguno de los que aparecen, 
 	 * se ejecuta el caso por defecto.
-	 * @return El resultado devuelve la constante anteriormente creada, además del atributo matricula, 
+	 * @return El resultado devuelve el método matriculaCoche anteriormente creado, 
 	 * también se devuelve el resultado de los varios métodos que se mencionan más abajo 
 	 * al que se le pasan dos parámetros el modelo y la matrícula.
 	 */
@@ -55,22 +55,30 @@ public class Coche {
 		switch (tipo)
 		{
 		case "Gasolina":
-			resultado += coche + matricula + metodoGasolina(modelo, fabricante);
+			resultado += matriculaCoche() + metodoGasolina(modelo, fabricante);
 			break;
 
 		case "Diesel":
-			resultado += coche + matricula + metodoDiesel(modelo, fabricante);
+			resultado += matriculaCoche() + metodoDiesel(modelo, fabricante);
 			break;
 
 		case "Híbrido":
-			resultado += coche + matricula + metodoHibrido(modelo, fabricante);
+			resultado += matriculaCoche() + metodoHibrido(modelo, fabricante);
 			break;
 
 		default:
-			resultado += coche + matricula + "no dispone de información";
+			resultado += matriculaCoche() + "no dispone de información";
 			break;		
 		}
 		return resultado;
+	}
+
+	/**
+	 * Método matriculaCoche
+	 * @return devuelve la constante coche más la matrícula
+	 */
+	public String matriculaCoche() {
+		return coche + matricula;
 	}
 
 	/**
